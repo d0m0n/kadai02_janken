@@ -17,7 +17,7 @@ $(document).ready(function () {
 		$("#displayFrame4").text(inputText4);
 		$("#displayFrame5").text(inputText5);
 		$("#displayFrame6").text(inputText6);
-		
+
 		$("#overlay-text").fadeOut();
 	});
 });
@@ -41,12 +41,14 @@ $(document).ready(function () {
 			}
 			setInterval(showRandomImage, 100); // 100ミリ秒ごとに画像をランダムに切り替え
 			$("#dest-button").text("何が出るかな？"); // クリックで文字の表記を変える
+			$("#loop")[0].play();
 		} else {
 			$("#overlay").fadeOut();　/*オーバーレイがふわっと消える*/
 			var num = Math.floor(Math.random() * 6) + 1;
 			console.log(num, "箱の中身");
 			$("#result").html(`<img src="img/dice${num}.svg" alt="サイコロ${num}">`);
 			$("#dest-button").text("もう一回！"); // クリックで文字の表記を変える
+			$("#gong")[0].play(); // 銅鑼の音を鳴らす
 		}
 	});
 });
