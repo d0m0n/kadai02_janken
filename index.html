@@ -12,39 +12,69 @@
 
 <body>
 	<div class="dest-list">
-		<H1>目的地選定システム</H1>
+		<div class="main-title">
+			<H1>目的地選定システム</H1>
+			<h4 id="showoverlay-text">目的地を入力する</h4>
+		</div>
+		<!-- 文字入力フォームオーバーレイ -->
+		<div id="overlay-text">
+			<div id="overlay-textContent">
+				<input type="text" id="inputText1" placeholder="目的地1を入力してください"> <br>
+				<input type="text" id="inputText2" placeholder="目的地2を入力してください"> <br>
+				<input type="text" id="inputText3" placeholder="目的地3を入力してください"> <br>
+				<input type="text" id="inputText4" placeholder="目的地4を入力してください"> <br>
+				<input type="text" id="inputText5" placeholder="目的地5を入力してください"> <br>
+				<input type="text" id="inputText6" placeholder="目的地6を入力してください"> <br>
+				<button id="submitText">送信</button>
+			</div>
+		</div>
 		<!-- 目的地リスト -->
 		<ol>
-			<li class="list1"><img src="./img/dice1.svg" alt="サイコロ1">
-				<p>目的地1</p>
+			<li class="resizieimage">
+				<img src="./img/dice1.svg" alt="サイコロ1">
+				<H3 id="displayFrame1">ここに目的地1が表示されます</H3>
 			</li>
-			<li>
+			<li class="resizieimage">
 				<img src="./img/dice2.svg" alt="サイコロ2">
-				<p>目的地2</p>
+				<H3 id="displayFrame2">ここに目的地2が表示されます</H3>
 			</li>
-			<li>
+			<li class="resizieimage">
 				<img src="./img/dice3.svg" alt="サイコロ3">
-				<p>目的地3</p>
+				<H3 id="displayFrame3">ここに目的地3が表示されます</H3>
 			</li>
-			<li>
+			<li class="resizieimage">
 				<img src="./img/dice4.svg" alt="サイコロ4">
-				<p>目的地4</p>
+				<H3 id="displayFrame4">ここに目的地4が表示されます</H3>
 			</li>
-			<li>
+			<li class="resizieimage">
 				<img src="./img/dice5.svg" alt="サイコロ5">
-				<p>目的地5</p>
+				<H3 id="displayFrame5">ここに目的地5が表示されます</H3>
 			</li>
-			<li>
+			<li class="resizieimage">
 				<img src="./img/dice6.svg" alt="サイコロ6">
-				<p>目的地6</p>
+				<H3 id="displayFrame6">ここに目的地6が表示されます</H3>
 			</li>
 		</ol>
+		<!-- ここからサイコロオーバーレイ -->
+		<div id="overlay">
+			<div id="slideshow" class="dest-display">
+				<img src="img/dice1.svg" class="active" alt="サイコロ1">
+				<img src="./img/dice2.svg" alt="サイコロ2">
+				<img src="./img/dice3.svg" alt="サイコロ3">
+				<img src="./img/dice4.svg" alt="サイコロ4">
+				<img src="./img/dice5.svg" alt="サイコロ5">
+				<img src="./img/dice6.svg" alt="サイコロ6">
+			</div>
+
+		</div>
 	</div>
 	<!-- 目的地を抽選 -->
 	<div class="dest">
-		<h4 class="dest-button">行き先を決める</h4>
+		<h4 id="dest-button">サイコロスタート！</h4>
 		<p class="arrow">▶</p>
-		<H5 class="dest-display"></H5>
+		<div>
+			<p id="result"></p>
+		</div>
 	</div>
 
 	<!--必ず！！！自分で作成したjsより前に貼り付けてください-->
